@@ -3,6 +3,7 @@
 
     --hero-dark-bg:#2A4032;
     --hero-bright-bg:#3A5E46;
+    --logo-bg:#181818;
 
     --nav-select:#FFFFFF;
     --nav-unselect:#FFFFFF4D;
@@ -77,4 +78,11 @@ body {
     background-color: var(--store-bg);
     border-radius: 50%;
     padding: 12px;
+}
+
+/* logo part */
+#logo {
+    background-color: var(--logo-bg);
+    padding: 30px 110px;
+    justify-content: space-between;
 }
