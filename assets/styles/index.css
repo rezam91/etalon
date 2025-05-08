@@ -4,18 +4,25 @@
     --hero-dark-bg:#2A4032;
     --hero-bright-bg:#3A5E46;
     --logo-bg:#181818;
+    --new1-bg:#C5C2CA;
+    
 
     --nav-select:#FFFFFF;
     --nav-unselect:#FFFFFF4D;
+    --text-color:#000000;
 
     --store-bg:#FDDE67;
 
     --h1-size: 36px;
+    --new1-size:24px;
+    --h2-size:48px;
     --nav-size:18px;
 
     --h1-height:40px;
+    --h2-height:48px;
 
     --h1-weight:900;
+    --new1-weight:700;
     --nav-weight:400;
 }
 * {
@@ -35,7 +42,6 @@ body {
     width: var(--desktop-width);
     margin-left: auto;
     margin-right: auto;
-    background-color: blue;
 }
 
 /* hero part */
@@ -85,4 +91,91 @@ body {
     background-color: var(--logo-bg);
     padding: 30px 110px;
     justify-content: space-between;
+}
+
+/* New Collection part */
+#new {
+    /* background-color: red; */
+    padding:70px 110px ;
+}
+#new h2 {
+    margin-top: 0;
+    margin-bottom: 70px;
+    /* background-color: green; */
+    font-size: var(--h2-size);
+    font-weight: var(--nav-weight);
+    line-height: var(--h2-height);
+    color: var(--text-color);
+}
+#new .collection-wrapper {
+    gap: 80px;
+}
+#new .collection-wrapper figure {
+    margin: 0;
+    /* margin-bottom: -20px; */
+    /* padding-bottom: -40px; */
+    border-radius: 24px;
+    position: relative;
+}
+#new .collection-wrapper figure:first-of-type {
+    /* padding: 0; */
+    width: 500px;
+    background-color: var(--new1-bg);
+}
+#new .collection-wrapper figure:first-of-type img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#new .collection-wrapper figure a {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    text-decoration: none;
+    background-color:var(--logo-bg) ;
+    color: var(--nav-select);
+    padding: 16px 40px;
+    border-radius: 6px;
+}
+#new .collection-wrapper figure:nth-of-type(2) {
+    background-color: var(--store-bg);
+    flex-grow: 1;
+    align-items: center;
+    padding-top: 31px;
+}
+#new .collection-wrapper figcaption {
+    font-weight: var(--new1-weight);
+    font-size: var(--new1-size);
+    line-height: var(--h1-height);
+}
+#new .collection-wrapper figure:first-of-type figcaption {
+    margin-top: 24px;
+    margin-left:25px ;
+}
+#new .collection-wrapper figure:nth-of-type(2) figcaption {
+    position: relative;
+}
+#new .collection-wrapper figure:nth-of-type(2) p:first-of-type {
+    position: absolute;
+    left: 0;
+    top: -96px;
+    transform: translateY(-50%);
+    text-align: center;
+}
+#new .collection-wrapper .off {
+    font-family: roboto;
+    font-size:var(--h2-size);
+    font-weight:var(--new1-weight);
+    line-height: 100%;
+}
+
+/* best sellers part */
+#best {
+    background-color: blue;
+}
+
+/* Timer Part */
+#timer {
+    background-color: red;
 }
