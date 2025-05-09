@@ -15,10 +15,14 @@
     --nav-unselect:#FFFFFF4D;
     --text-color:#000000;
     --best-price-color:#00000099;
+    --sale-cond-color:#FFFFFFCC;
 
     --store-bg:#FDDE67;
     --timer-bg:#3B5F47;
 
+    --clothes-type-size:112px;
+    --year-hero-size:60px;
+    --sale-cond-size:25px;
     --h1-size: 36px;
     --shoe-off:64px;
     --new1-size:24px;
@@ -30,6 +34,7 @@
 
     --h1-height:40px;
     --h2-height:48px;
+    --clothes-type-height:100px;
 
     --h1-weight:900;
     --new1-weight:700;
@@ -97,7 +102,66 @@ body {
     border-radius: 50%;
     padding: 12px;
 }
+.hero {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-top: 64px;
+}
+#hero .hero .hero-title {
+    border: 1px blue solid;
+}
 
+#hero .hero .year {
+    margin: 0;
+    font-size:var(--year-hero-size) ;
+    font-weight:var(--nav-weight) ;
+    font-style: italic;
+    color:var(--nav-unselect) ;
+}
+#hero .hero .clothes-type {
+    margin-top: 24px;
+    margin-bottom: 0;
+    font-size:var(--clothes-type-size) ;
+    font-weight:var(--h1-weight) ;
+    line-height:var(--clothes-type-height) ;
+    color:var(--nav-select) ;
+    letter-spacing:calc(var(--clothes-type-size)*13/100) ;
+}
+#hero .hero .sale-cond {
+    margin-top:24px ;
+    margin-bottom: 0;
+    font-size:var(--sale-cond-size) ;
+    font-weight:var(--nav-weight) ;
+    color:var(--sale-cond-color) ;
+}
+#hero .hero button {
+    margin-top: 49px;
+    background-color:var(--store-bg) ;
+    padding:16px 40px ;
+    font-size:var(--more-button-size) ;
+    font-weight:var(--nav-weight) ;
+    color:var(--logo-bg) ;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#hero .hero .hero-right-side {
+    border: 2px pink solid;
+    /* flex-grow: 1; */
+    min-width: 758px;
+    /* background-color: red; */
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+#hero .hero .hero-image-wrapper {
+    /* width: fit-content; */
+    /* background-color: blue; */
+    /* border: 1px black solid; */
+}
+#hero .hero .hero-image-wrapper .hero-img {
+    margin-left: auto;
+    margin-right: auto;
+}
 /* logo part */
 #logo {
     background-color: var(--logo-bg);
