@@ -8,6 +8,7 @@
     --best-bg:#E9E9E9;
     --checked:red;
     --off-color:#3A5E46;
+    --counter-bg:#18181840;
     
 
     --nav-select:#FFFFFF;
@@ -16,8 +17,10 @@
     --best-price-color:#00000099;
 
     --store-bg:#FDDE67;
+    --timer-bg:#3B5F47;
 
     --h1-size: 36px;
+    --shoe-off:64px;
     --new1-size:24px;
     --h2-size:48px;
     --nav-size:18px;
@@ -313,5 +316,65 @@ h2 {
 }
 /* Timer Part */
 #timer {
-    background-color: red;
+    background: linear-gradient(to right,var(--store-bg) 32%,var(--timer-bg) 32% );
+    padding:78px 110px ;
+    display: flex;
+    gap: 24px;
+}
+#timer .shoe p {
+    font-family: roboto;
+    font-size:var(--shoe-off) ;
+    font-weight:var(--new1-weight) ;
+    line-height: var(--h2-height);
+    margin: 0;
+}
+#timer .shoe img {
+    margin-top: 32px;
+    margin-right: 38px;
+}
+#timer .timer-down{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#timer .timer-down p {
+    font-size:var( --shoe-off) ;
+    font-weight:var(--new1-weight) ;
+    line-height: var(--h2-height);
+    margin: 0;
+    color:var(--nav-select) ;
+}
+#timer .timer-down ul {
+    list-style: none;
+    padding-left:0 ;
+    display: flex;
+    gap: 48px;
+}
+#timer ul li {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+#timer ul li .counter {
+    font-family: roboto;
+    font-size:var(--shoe-off) ;
+    font-weight: var(--new1-weight);
+    line-height:var(--h2-height) ;
+    color:var(--nav-select) ;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-radius: 8px;
+    background-color: var(--counter-bg);
+    display: inline-flex;
+    justify-content: center;
+}
+#timer ul li .unit {
+    font-family: roboto;
+    font-size:var(--new1-size) ;
+    font-weight:var(--best-price-weight) ;
+    color:var( --nav-select) ;
+    margin-top:12px ;
+    display: inline-flex;
+    justify-content: center;
 }
