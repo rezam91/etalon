@@ -28,6 +28,7 @@
 
     --clothes-type-size:112px;
     --year-hero-size:60px;
+    --year-hero-size-mobile:30px;
     --sale-cond-size:25px;
     --h1-size: 36px;
     --shoe-off:64px;
@@ -42,6 +43,7 @@
     --h1-height:40px;
     --h2-height:48px;
     --clothes-type-height:100px;
+    --clothes-type-height-mobile:50px;
 
     --h1-weight:900;
     --new1-weight:700;
@@ -687,7 +689,6 @@ h2 {
         padding-top: 27px;
     }
     #hero .nav-bar {
-        /* display: block; */
         position: fixed;
         left: 50%;
         transform: translateX(-50%);
@@ -734,5 +735,35 @@ h2 {
     #hero .nav-bar nav ul li:nth-of-type(5) {
         order: 5;
         opacity: 80%;
+    }
+    .hero {
+        padding-left: 15px;
+        padding-right: 15px;
+        flex-direction: column;
+        /* gap: 24px; */
+        /* align-items: center; */
+        margin-top: 27px;
+    }
+    #hero .hero .year {
+        font-size:var(--year-hero-size-mobile) ;
+    }
+    #hero .hero .clothes-type,.clothes-type2,.clothes-type3 {
+        margin-top: 12px;
+        font-size:var(--year-hero-size);
+        line-height:var(--clothes-type-height-mobile);
+        letter-spacing:0;
+    }
+    #hero .hero .sale-cond {
+        margin-top:12px;
+        font-size:var(--nav-size);
+    }   
+    #hero .hero button {
+        margin-top: 24px;
+    }
+    #hero .hero .hero-right-side .hero-price {
+        display:none;
+    }
+    #hero .hero .hero-right-side .hero-image-wrapper .hero-off {
+        display: none;
     }
 }
