@@ -94,6 +94,9 @@ body {
     gap: 32px;
     margin: 0;
 }
+#hero .nav-bar ul li a img {
+    display: none;
+}
 #hero .nav-bar ul li:first-of-type a {
     color: var(--nav-select);
 }
@@ -672,4 +675,64 @@ h2 {
     margin-top:12px ;
     display: inline-flex;
     justify-content: center;
+}
+
+@media (width<1540px) {
+    .container {
+        width: 360px;
+    }
+    #hero {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 27px;
+    }
+    #hero .nav-bar {
+        /* display: block; */
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 360px;
+        display: inline-flex;
+        bottom: 0;
+        z-index: 1000;
+        background-color:var(--store-bg);
+        padding: 15px 12px;
+    }
+    #hero .nav-bar h1 {
+        display: none;
+    }
+    #hero nav {
+        width: 100%;
+    }
+    #hero .nav-bar ul {
+        justify-content: space-between;
+    }
+    #hero .nav-bar ul li a {
+        padding: unset;
+    }
+    #hero .nav-bar ul li a img {
+        display: block;
+    }
+    #hero .nav-bar ul li a .nav-title {
+        display: none;
+    }
+    #hero .nav-bar .basket {
+        display: none;
+    }
+    #hero .nav-bar nav ul li:nth-of-type(1) {
+        order: 3;
+    }
+    #hero .nav-bar nav ul li:nth-of-type(2) {
+        order: 4;
+    }
+    #hero .nav-bar nav ul li:nth-of-type(3) {
+        order: 2;
+    }
+    #hero .nav-bar nav ul li:nth-of-type(4) {
+        order: 1;
+    }
+    #hero .nav-bar nav ul li:nth-of-type(5) {
+        order: 5;
+        opacity: 80%;
+    }
 }
