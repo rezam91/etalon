@@ -35,6 +35,7 @@
     --shoe-off:64px;
     --new1-size:24px;
     --h2-size:48px;
+    --h2-mobile-size:32px;
     --nav-size:18px;
     --best-price-size:16px;
     --off-value-size:12px;
@@ -43,6 +44,7 @@
 
     --h1-height:40px;
     --h2-height:48px;
+    --h2-mobile-height:32px;
     --clothes-type-height:100px;
     --clothes-type-height-mobile:50px;
 
@@ -842,11 +844,54 @@ h2 {
     }
     /* logo part */
     #logo {
-        /* background-color: var(--logo-bg); */
         padding: 12px 15px;
-        /* justify-content: space-between; */
     }
     #logo img {
         height: 10px;
+    }
+
+    /* new collection part */
+    #new {
+        padding:32px 15px ;
+    }
+    h2 {
+        margin-bottom: 32px;
+        font-size: var(--h2-mobile-size);
+        line-height: var(--h2-mobile-height);
+    }
+    #new .collection-wrapper {
+        flex-direction: column;
+        gap: 32px;
+    }
+    #new .collection-wrapper figure:first-of-type {
+        width: 100%;
+    }
+    #new .collection-wrapper figcaption {
+        font-size: var(--nav-size);
+        line-height: var(--nav-size);
+    }
+    #new .collection-wrapper figure:first-of-type img {
+        display: block;
+        position:static;
+        margin-left: auto;
+        margin-right: auto;
+        transform: translateX(0);
+        width: 197px;
+        margin-top: 35px;
+    }
+    #new .collection-wrapper figure a {
+        bottom: 18px;
+        right: 18px;
+    }
+    #new .collection-wrapper figure:nth-of-type(2) img {
+        width: 190px;
+    }
+    #new .collection-wrapper figure:nth-of-type(2) p:first-of-type {
+        left: -45px;
+        top: -100px;
+        transform: translateY(0);
+    }
+    #new .collection-wrapper .off {
+        font-size:var(--new1-size);
     }
 }
