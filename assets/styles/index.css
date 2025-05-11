@@ -28,6 +28,7 @@
 
     --clothes-type-size:112px;
     --year-hero-size:60px;
+    --year-hero-size-mobile:30px;
     --sale-cond-size:25px;
     --h1-size: 36px;
     --shoe-off:64px;
@@ -42,6 +43,7 @@
     --h1-height:40px;
     --h2-height:48px;
     --clothes-type-height:100px;
+    --clothes-type-height-mobile:50px;
 
     --h1-weight:900;
     --new1-weight:700;
@@ -119,7 +121,6 @@ body {
 .hero {
     display: flex;
     gap: 24px;
-    align-items: center;
     margin-top: 64px;
 }
 #hero .hero .hero-title {
@@ -687,7 +688,6 @@ h2 {
         padding-top: 27px;
     }
     #hero .nav-bar {
-        /* display: block; */
         position: fixed;
         left: 50%;
         transform: translateX(-50%);
@@ -735,4 +735,109 @@ h2 {
         order: 5;
         opacity: 80%;
     }
+    .hero {
+        padding-left: 15px;
+        padding-right: 15px;
+        flex-direction: column;
+        /* gap: 24px; */
+        /* align-items: center; */
+        margin-top: 27px;
+        display: block;
+    }
+    #hero .hero .hero-title {
+        position: relative;
+        z-index: 2;
+    }
+    #hero .hero .year {
+        font-size:var(--year-hero-size-mobile) ;
+    }
+    #hero .hero .clothes-type,.clothes-type2,.clothes-type3 {
+        margin-top: 12px;
+        font-size:var(--year-hero-size);
+        line-height:var(--clothes-type-height-mobile);
+        letter-spacing:0;
+    }
+    #hero .hero .sale-cond {
+        margin-top:12px;
+        font-size:var(--nav-size);
+    }   
+    #hero .hero button {
+        margin-top: 24px;
+    }
+    #hero .hero .hero-right-side {
+        min-width: unset;
+        margin-top: -40px;
+        position: relative;
+    }
+    #hero .hero .hero-right-side .hero-price {
+        display: none;
+    }
+    #hero .hero .hero-right-side .hero-image-wrapper .hero-off {
+        display: none;
+    }
+    #hero .hero .hero-right-side .hero-image-wrapper .hero-img {
+        width: 208.08px;
+    }
+    #hero .hero .hero-right-side .hero-image-wrapper .hero-img2 {
+        height: 376.58px;
+        object-fit:cover;
+        object-position: top;
+
+    }    
+    #hero .hero .hero-right-side .hero-image-wrapper .hero-img3 {
+        height: 376.58px;
+        object-fit:cover;
+        object-position: bottom;
+
+    } 
+    #hero .hero .hero-right-side .hero-image-wrapper .hero-circle:nth-of-type(1) {
+        width: 190px;
+        height: 190px;
+    }
+    #hero .hero .hero-right-side .hero-image-wrapper .hero-circle:nth-of-type(2) {
+        width: 190px;
+        height: 190px;
+    }
+    #hero input[id="page1"]:checked ~ .hero .hero-right-side .hero-image-wrapper .hero-circle:nth-of-type(1) {
+        top: 50px;
+        left: 60px;
+    }
+    #hero input[id="page1"]:checked ~ .hero .hero-right-side .hero-image-wrapper .hero-circle:nth-of-type(2) {
+        top: 100px;
+        left: -55px;
+    }
+    #hero input[id="page2"]:checked ~ .hero .hero-right-side .hero-image-wrapper .hero-circle:nth-of-type(1) {
+        top: 50px;
+        left: 130px;
+    }
+    #hero input[id="page2"]:checked ~ .hero .hero-right-side .hero-image-wrapper .hero-circle:nth-of-type(2) {
+        top: 170px;
+        left: -5px;
+    }
+    #hero input[id="page3"]:checked ~ .hero .hero-right-side .hero-image-wrapper .hero-circle:nth-of-type(1) {
+        top: 150px;
+        left: 130px;
+    }
+    #hero input[id="page3"]:checked ~ .hero .hero-right-side .hero-image-wrapper .hero-circle:nth-of-type(2) {
+        top: 70px;
+        left: -5px;
+    }
+    #hero .hero .page-selector {
+        display: none;
+    }
+    #hero .hero .page-indicator {
+        flex-direction: row;
+        z-index: 3;
+        top: unset;
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 21px;
+    }
+    #hero .hero .page-indicator label:nth-of-type(1),
+    #hero .hero .page-indicator label:nth-of-type(2),
+    #hero .hero .page-indicator label:nth-of-type(3) {
+        width: 14px;
+        height: 14px;
+    }
+    /* logo part */
 }
