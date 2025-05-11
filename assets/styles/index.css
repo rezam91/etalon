@@ -894,4 +894,55 @@ h2 {
     #new .collection-wrapper .off {
         font-size:var(--new1-size);
     }
+
+    /* best sellers part */
+    #best {
+        padding:32px 15px ;
+    }
+    #best ul {
+        margin-bottom: 0;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        height: unset;
+        transition:unset;
+    }
+    #best ul li {
+        width: 100%;
+    }
+    .img-wrapper {
+        padding: 31px 43px 40px 43px ;  
+    }
+    #best figure img {
+        width: 133px;
+    }
+    #best figure:first-of-type {
+        margin-left: -17.5px;
+    }
+    #best li:nth-of-type(4){
+        margin-right:unset;
+    }
+    #best li:nth-of-type(8){
+        margin-right: unset;
+    }
+    #best figcaption p {
+        font-size:var(--best-price-size) ;
+    }
+    #best figcaption a {
+        width: 30px;
+        height: 30px;
+    }
+    #best figcaption .best-name .best-price {
+        font-size:var(--more-button-size) ;
+    }
+    .off-value {
+        font-size:var(--more-button-size) ;
+        top: 12px;
+        left: 12px;
+    }
+    #best .load-more {
+        display: none;
+    }
+    #best input[id=more-product]:checked ~ ul {
+        height: unset;
+    }
 }
