@@ -945,4 +945,31 @@ h2 {
     #best input[id=more-product]:checked ~ ul {
         height: unset;
     }
+    /* Timer Part */
+    #timer {
+        background: var(--timer-bg);
+        padding:32px 15px ;
+    }
+    #timer .shoe{
+        display: none;
+    }
+    #timer .timer-down p {
+        font-size:var(--h2-mobile-size) ;
+        line-height: var(--h2-mobile-height);
+        text-align: center;
+    }
+    #timer .timer-down ul {
+        margin-top: 32px;
+        gap: 12px;
+    }
+    #timer ul li .counter {
+        font-size:var(--new1-size) ;
+        line-height:var(--h2-mobile-height) ;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    #timer ul li .unit {
+        font-size:var(--off-value-size) ;
+        margin-bottom: 20px;
+    }
 }
