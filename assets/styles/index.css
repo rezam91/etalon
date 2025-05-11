@@ -105,6 +105,29 @@ body {
 #hero .nav-bar ul li:first-of-type a {
     color: var(--nav-select);
 }
+#hero .nav-bar ul li:nth-of-type(4) {
+    position: relative;
+}
+#hero .nav-bar ul li:nth-of-type(4):hover:after {
+    visibility: visible;
+    opacity: 100%;
+}
+#hero .nav-bar ul li:nth-of-type(4):after {
+    position: absolute;
+    white-space:nowrap;
+    content:'Email: r.mehralizadeh@gmail.com' ;
+    background-color:var(--store-bg) ;
+    font-size:var(--new1-size) ;
+    font-weight:var(--new1-weight) ;
+    border-radius: 6px;
+    padding: 4px 8px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
 #hero .nav-bar ul li a {
     padding: 5px 10px;
     text-decoration: none;
@@ -738,12 +761,13 @@ h2 {
         order: 5;
         opacity: 80%;
     }
+    #hero .nav-bar ul li:nth-of-type(4):after {
+        display: none;
+    }
     .hero {
         padding-left: 15px;
         padding-right: 15px;
         flex-direction: column;
-        /* gap: 24px; */
-        /* align-items: center; */
         margin-top: 27px;
         display: block;
     }
