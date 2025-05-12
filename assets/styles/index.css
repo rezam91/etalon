@@ -77,7 +77,6 @@ body {
 /* hero part */
 #hero {
     position: relative;
-    /* height: 500px; */
     background: linear-gradient(to bottom right,var(--hero-dark-bg),var(--hero-bright-bg));
     padding-left: 110px;
     padding-right: 110px;
@@ -149,8 +148,6 @@ body {
     display: flex;
     gap: 24px;
     margin-top: 64px;
-}
-#hero .hero .hero-title {
 }
 
 #hero .hero .year {
@@ -319,7 +316,6 @@ body {
     border-radius: 50%;
     border: 1px solid var(--nav-select);
     cursor: pointer;
-    /* opacity: 30%; */
 }
 #hero .hero .page-selector label:nth-of-type(1) {
     opacity: 30%;
@@ -425,13 +421,11 @@ body {
 
 /* New Collection part */
 #new {
-    /* background-color: red; */
     padding:70px 110px ;
 }
 h2 {
     margin-top: 0;
     margin-bottom: 70px;
-    /* background-color: green; */
     font-size: var(--h2-size);
     font-weight: var(--nav-weight);
     line-height: var(--h2-height);
@@ -442,13 +436,10 @@ h2 {
 }
 #new .collection-wrapper figure {
     margin: 0;
-    /* margin-bottom: -20px; */
-    /* padding-bottom: -40px; */
     border-radius: 24px;
     position: relative;
 }
 #new .collection-wrapper figure:first-of-type {
-    /* padding: 0; */
     width: 500px;
     background-color: var(--new1-bg);
 }
@@ -542,6 +533,7 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 #best figure img:hover {
     transform: scale(1.15);
@@ -644,10 +636,6 @@ h2 {
     height: 854px;
 }
 
-.sell-wrapper {
-    /* background-color: red; */
-    /* width: 25%; */
-}
 /* Timer Part */
 #timer {
     background: linear-gradient(to right,var(--store-bg) 32%,var(--timer-bg) 32% );
@@ -662,9 +650,13 @@ h2 {
     line-height: var(--h2-height);
     margin: 0;
 }
+#timer .shoe {
+    position: relative;
+}
 #timer .shoe img {
     margin-top: 32px;
     margin-right: 38px;
+    cursor: pointer;
 }
 #timer .timer-down{
     flex-grow: 1;
@@ -711,6 +703,61 @@ h2 {
     margin-top:12px ;
     display: inline-flex;
     justify-content: center;
+}
+#timer .shoe .steal {
+    background-color:var(--nav-unselect) ;
+    border-radius: 16px;
+    padding: 4px 8px;
+    position: absolute;
+    white-space: nowrap;
+    border: 1px solid black;
+    align-items:end;
+    font-family: roboto;
+    font-size:22px ;
+    font-weight:500 ;
+    top: -100px;
+    height: 1px;
+    display: none;
+}
+#timer .shoe .steal .steal-text {
+    opacity: 0;
+}
+#timer .shoe .steal img {
+    opacity: 0;
+}
+#timer .shoe img:hover ~ .steal {
+    display: flex;
+    animation-name: off-animation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+#timer .shoe img:hover ~ .steal img {
+    animation-name: steal-opacity;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+#timer .shoe img:hover ~ .steal .steal-text {
+    animation-name: steal-opacity;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes off-animation {
+    0% {
+        height: 1px;
+    }
+    100% {
+        height: 75px;
+    }
+}
+@keyframes steal-opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 .support {
     background-color: var(--support-bg);
