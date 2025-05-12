@@ -12,7 +12,7 @@
     --hero-circle-bg:#1B2D22;
     --button-hover-bg:#FFEB9D;
     --button-black-hover-bg:#1E1E1E;
-    --page2-hero-circle-bg:#004080;
+    --page2-hero-circle-bg:#800009c7;
     --page3-hero-circle-bg:#8C6239;
     --support-bg:#EF4056;
     
@@ -783,7 +783,8 @@ h2 {
     }
 }
 .support {
-    background-color: var(--support-bg);
+    /* background-color: var(--support-bg); */
+    background-color:var(--store-bg) ;
     border-radius:26px;
     padding: 4px 8px;
     display: flex;
@@ -792,7 +793,7 @@ h2 {
     position: fixed;
     bottom: 10px;
     right: 20px;
-    color: white;
+    color: var(--logo-bg);
     text-decoration: none;
 }
 .support span {
