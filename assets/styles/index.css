@@ -634,9 +634,6 @@ h2 {
     fill: var(--checked);
     stroke: var(--checked);
 }
-#best button:active {
-    background-color: red;
-}
 #best .load-more {
     width: fit-content;
     display: block;
@@ -651,8 +648,6 @@ h2 {
 }
 #best .load-more:hover {
     background-color: var(--button-black-hover-bg);
-}
-#best .load-more:hover {
     cursor: pointer;
 }
 #best input[id=more-product]:checked ~ ul {
